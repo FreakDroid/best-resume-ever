@@ -2,9 +2,12 @@
 <div class="resume">
   <div class="leftCol m_box">
     <div class="shadow"></div>
-    <div class="heading" id="myselfpic">
+    <div>
+      <div class="heading" id="myselfpic">
+      </div>
     </div>
-    <div class="section-headline">
+
+    <div class="section-headline-left">
       {{ lang.contact }}
     </div>
     <div class="item">
@@ -76,7 +79,7 @@
     </a>
 
     <div class="item last">
-      <div class="section-headline">
+      <div class="section-headline-left">
         {{ lang.skills }}
       </div>
       <div class="skill" v-for="skill in person.skills" :key="skill.name">
@@ -97,6 +100,9 @@
       <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
       <div>{{person.position}}</div>
     </div>
+    <div id="about" class="block">
+        {{person.about}}
+      </div>
 
     <div class="section-headline">{{ lang.experience }}</div>
     <div class="block" v-for="experience in person.experience" :key="experience.company">
@@ -155,7 +161,7 @@ a {
     display:block;
     font-size:1.17em;
     -webkit-margin-before:1em;
-    -webkit-margin-after:1em;
+    -webkit-margin-after:0;
     -webkit-margin-start:0;
     -webkit-margin-end:0;
     color:white;
@@ -181,7 +187,7 @@ a {
     display:block;
     font-size:0.67em;
     font-size:10pt;
-    -webkit-margin-before:2.33em;
+    -webkit-margin-before:0.33em;
     -webkit-margin-start:0;
     -webkit-margin-end:0;
     padding-top:0;
@@ -190,6 +196,17 @@ a {
   }
 }
 .section-headline {
+  text-transform:uppercase;
+  font-weight:500;
+  letter-spacing:3px;
+  font-size:10pt;
+  opacity:0.8;
+  margin-left:20px;
+  margin-top:10px;
+  margin-bottom:3px;
+  color:#3f3d3c;
+}
+.section-headline-left {
   text-transform:uppercase;
   font-weight:500;
   letter-spacing:3px;
@@ -441,9 +458,19 @@ h4 {
 #myselfpic {
   background-image:url('../../resume/id.jpg');
   color:black;
+  width: 50%;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 #githubIcon {
   width:25px;
   padding-left:17px;
+}
+
+#about{
+  font-size: 14px;
+  font-weight: 300;
 }
 </style>

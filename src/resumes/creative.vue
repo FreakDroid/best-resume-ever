@@ -2,9 +2,13 @@
   <div class="resume" id="resume2">
     <div class="left-column">
       <div>
+        <div class="heading" id="myselfpic">
+        </div>
+      </div>
+
+      <div>
         <div class="headline">
-          <span> {{ person.name.first }} {{ person.name.middle }} </span>
-          <span class="uppercase"> {{ person.name.last }} </span>
+          <span> {{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</span>
         </div>
 
         <p>
@@ -31,6 +35,8 @@
       <div class="block-marged txt-full-white">
         {{ person.contact.phone }}
       </div>
+
+
 
       <div class="social-container">
         <a v-if="person.contact.website"
@@ -78,7 +84,7 @@
       </div>
 
       <div class="hobbies-container">
-        <!-- <span class="subheadline">Hobbies</span> -->
+        <span class="subheadline">Hobbies</span>
         <div class="hobbies-content">
           <a v-for="(hobby, index) in person.hobbies" :key="index"
             class="hobby-item"
@@ -87,6 +93,22 @@
             <i v-if="hobby.iconClass" :class="hobby.iconClass + ' hobby-item__icon'"></i>
             <span class="hobby-item__icon-label"> {{ hobby.name }} </span>
           </a>
+        </div>
+      </div>
+
+      <div class="item last">
+        <div class="subheadline">
+          {{ lang.skills }}
+        </div>
+        <div class="skill" v-for="skill in person.skills" :key="skill.name">
+          <div class="right">
+            <span>{{skill.name}}&nbsp;</span>
+            <div class="progress">
+              <div class="determinate" :style="'width: '+skill.level+'%;'">
+                <i class="fa fa-circle"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -154,46 +176,6 @@
         </div>
       </div>
 
-      <div v-if="person.skills"
-        class="skills-section section">
-        <div class="icon">
-          <i class="material-icons">done_all</i>
-          <span class="section-headline"> {{ lang.skills }} </span>
-        </div>
-
-        <div class="section-content-grid">
-          <a v-for="(skill, index) in person.skills" :key="index"
-            class="grid-item"
-            :href="skill.url">
-
-            <i v-if="skill.iconClass" :class="'lang-icon ' + skill.iconClass"></i>
-
-            <span v-else class="squarred-grid-item"> {{ skill.name }} </span>
-          </a>
-        </div>
-      </div>
-
-      <div v-if="person.contributions"
-        class="contributions-section section">
-
-        <div class="icon">
-          <i class="fa fa-heart font-awesome-icons"></i>
-          <span class="section-headline"> {{lang.contributions}} </span>
-        </div>
-
-        <div class="section-content-grid">
-          <a v-for="(contribution, index) in person.contributions" :key="index"
-            :href="contribution.url"
-            class="section-content__item-grid">
-
-            <span class="section-content__header"> {{ contribution.name }} </span>
-            <span class="section-content__text"> {{ contribution.description }} </span>
-            <span class="section-content__text--light" style="word-break: break-all;">
-              {{ contribution.url }}
-            </span>
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -209,7 +191,7 @@ export default Vue.component(name, getVueOptions(name));
 
 <style lang="less" scoped>
 
-@accent-color: #A800FA;
+@accent-color: #989797;
 
 .resume {
   display: flex;
@@ -217,6 +199,28 @@ export default Vue.component(name, getVueOptions(name));
 
   font-family:'Roboto' !important;
   font-size: 0.9em;
+}
+
+#myselfpic {
+  background-image:url('../../resume/id.jpg');
+  color:black;
+  width: 50%;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 14px;
+  margin-top: -18px;
+}
+
+.heading {
+  background-color:white;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  width:100%;
+  height:277px;
 }
 
 .left-column {
@@ -494,6 +498,51 @@ a {
 
   display: block;
   margin-bottom: 10px;
+}
+
+.skill {
+  clear:both;
+  width:97%;
+  padding-top:4px;
+  .left {
+    float:left;
+    width:10%;
+    padding-top:3px;
+    i:nth-child(2) {
+      float:left;
+      padding-top:4px;
+    }
+  }
+  .right {
+    float:right;
+    width:93%;
+    .progress {
+      float:left;
+      position:relative;
+      height:2px;
+      display:block;
+      width:95%;
+      background-color:rgba(255,255,255,0.19);
+      border-radius:2px;
+      margin:0.5rem 0 1rem;
+      overflow:visible;
+      margin-bottom:10px;
+      .determinate {
+        background-color:#78909c;
+        position:absolute;
+        top:0;
+        bottom:0;
+        .fa, .material-icons {
+          font-size:13px;
+          position:absolute;
+          top:-4px;
+          right:-2px;
+          margin-left:50%;
+          color:white;
+        }
+      }
+    }
+  }
 }
 
 </style>

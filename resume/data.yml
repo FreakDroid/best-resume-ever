@@ -1,92 +1,107 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
-  middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
+  first: Wilfredo
+  middle: Roberto
+  last: Pérez
+about: As a Full Stack developer, I work with Angular, React, AWS, Nodejs, Mongo and DynamoDB. I've more than 7 years of experience
+  I love thinking, creating, and developing new stuff web or mobile.
 position: Software Developer
 
 birth:
-  year: 1990
-  location: New York
+  year: 1985
+  location: Caracas, Venezuela
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: Vates S.A
+  position: Fullstack Javascript Engineer / Frontend Developer
+  timeperiod: Since September 2017 (Actual Job)
+  description: Creating awesome stuff using Angular 7, React.js, Node.js and AWS. Nowadays contractor At Bayer,
+  website: https://www.vates.com/es
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: ISeatz (New Orleans, Luisiana)
+  position: Javascript Engineer (Remote - Freelancer)
+  timeperiod: March 2017 - September 2017
+  description: Improving, Debuging and Creating new stuff for America Express Travel Site. Using Angularjs and React.js
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: Azumo (San fracisco, Califronia)
+  position: Javascript Engineer (Remote - Freelancer)
+  timeperiod: July 2016 - January 2017
+  description: Creating bots using Node.js using Facebook platform.
+
+- company: Mediconecta.CA (Caracas, Venezuela)
+  position: Fullstack Developer .Net
+  timeperiod: Agust 2014 - October 2015
+  description: Working on Telemedicine platform to help the people. Using .Net Angular, React, Javascript.
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- degree: Systems Engineer
+  timeperiod: September 2002 - June 2007
+  description: Systems Engieer, IUP "Santiago Mariño", Caracas, Venezuela.
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: High School
+  timeperiod: September 1997 - April 2002
+  description: High School, UEP "Liceo Independencia", Caracas, Venezuela.
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
+- name: Javascript
   level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
-  level: 80
-- name: ES.Next
+- name: ES6
+  level: 78
+- name: React.js
   level: 70
-- name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: Node.js
+  level: 70
+- name: Angular 6
+  level: 70
+- name: Python
+  level: 55
+- name: MongoDB
+  level: 55
+- name: AWS
+  level: 65
+knowledge: English advanced.
+
+#projects:
+#- name: best-resume-ever
+#  platform: Vue
+#  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+#  url: https://github.com/salomonelli/best-resume-ever
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: UKindre
+  platform: React
+  description: Testing thing using React.
+  url: https://github.com/FreakDroid/ukindre
+
+- name: LaLigaDemo
+  platform: React Native
+  description: Demo app testing React Native
+  url: https://github.com/FreakDroid/LaLigaDemo
+
+- name: DynamicForm
+  platform: Angular
+  description: Creating Dynamic Form
+  url: https://github.com/FreakDroid/DynamicForm
 
 hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
+- name: Reading
+  iconClass: fa fa-book
 
-- name: Drawing
-  iconClass: fa fa-pencil
+- name: Running
+  iconClass: fas fa-shoe-prints
   url: https://example.com
 
 contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: I'm looking for opensource projects
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: wilfredo1285@gmail.com
+  phone: +54 9 1127927778
+  street: Paraguay 1873
+  city: Buenos Aires - Argentina
+  website: I don't have
+  github: freakdroid
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
 `
